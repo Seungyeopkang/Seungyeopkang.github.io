@@ -66,6 +66,9 @@
   ul.plain { list-style: none; padding: 0; margin: 0; }
 
   .pub { margin-bottom: 22px; }
+  h3 { font-size: 15px; font-weight: 600; color: var(--muted); margin: 26px 0 12px; }
+  .pub.small { margin-bottom: 12px; }
+  .pub.small .pub-title { font-weight: 500; font-size: 15px; }
   .pub-title { font-weight: 600; }
   .pub-authors, .pub-venue { color: var(--muted); font-size: 15px; }
   .pub-authors b { color: var(--fg); font-weight: 600; }
@@ -103,7 +106,7 @@
 
 <header>
   <div class="avatar" aria-hidden="true">
-    <img src="assets/profile.jpg" alt="" onerror="this.parentElement.textContent = 'SK';">
+    <img src="assets/profile.jpg" alt="Seungyeop Kang" onerror="this.parentElement.textContent = 'SK';">
   </div>
   <div>
     <h1>Seungyeop Kang<span class="ko">강승엽</span></h1>
@@ -124,6 +127,8 @@
 
 <h2>Publications</h2>
 
+<h3>Journal</h3>
+
 <div class="pub">
   <div class="pub-title"><span class="tag ok">Electronics 2026</span>Budgeted Fixed-Proxy Search for Zero-Shot NAS via Evaluation-Efficient Memetic NAS</div>
   <div class="pub-authors"><b>Seungyeop Kang</b>, Wangduk Seo</div>
@@ -132,9 +137,12 @@
   <div class="pub-links"><a href="https://doi.org/10.3390/electronics15153408">Paper</a><a href="https://github.com/Seungyeopkang/eem-nas">Code</a></div>
 </div>
 
+<h3>Manuscripts</h3>
+
 <div class="pub">
-  <div class="pub-title"><span class="tag">Under review</span>Post-search optimization for DARTS-style architectures</div>
-  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-title"><span class="tag">In preparation</span>Post-Search Model Optimization for DARTS-Style Architectures</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b>, W. Lim, D.-W. Kim, Wangduk Seo</div>
+  <div class="pub-venue">Manuscript in final preparation for <i>Engineering Applications of Artificial Intelligence</i> (Elsevier)</div>
   <div class="pub-note">ImageNet FLOPs −27.2% at −0.28 pp Top-1, with latency measured on iPhone (Core ML) and Exynos (ONNX Runtime).</div>
 </div>
 
@@ -151,16 +159,16 @@
   <div class="pub-links"><a href="https://github.com/Seungyeopkang/zero-cost-proxy-endpoints">Code</a></div>
 </div>
 
-<div class="pub">
-  <div class="pub-title"><span class="tag ok">KIIT 2026</span>Smart Glass-Based Object Location Memory and Conversational Search System for Daily-Life Assistance</div>
-  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
-  <div class="pub-venue">Korean Institute of Information Technology, 2026 · Outstanding Paper Award (Silver)</div>
+<h3>Domestic conference papers (Korean)</h3>
+
+<div class="pub small">
+  <div class="pub-title">Smart Glass-Based Object Location Memory and Conversational Search System for Daily-Life Assistance</div>
+  <div class="pub-venue"><b>S. Kang</b> et al. KIIT 2026 · Outstanding Paper Award (Silver)</div>
 </div>
 
-<div class="pub">
-  <div class="pub-title"><span class="tag ok">KIIT 2025</span>Development of an AI-Based Infant Safety Monitoring and Real-Time Response System</div>
-  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
-  <div class="pub-venue">Korean Institute of Information Technology, 2025</div>
+<div class="pub small">
+  <div class="pub-title">Development of an AI-Based Infant Safety Monitoring and Real-Time Response System</div>
+  <div class="pub-venue"><b>S. Kang</b> et al. KIIT 2025</div>
 </div>
 
 <h2>Projects</h2>
