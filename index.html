@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seungyeop Kang</title>
+<meta name="description" content="Seungyeop Kang (강승엽): efficient deep learning, neural architecture search, and model compression.">
+<meta property="og:title" content="Seungyeop Kang">
+<meta property="og:description" content="Efficient deep learning: neural architecture search, pruning, and on-device inference.">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --fg: #1d1d1f;
+    --muted: #5f6368;
+    --faint: #e6e6e3;
+    --accent: #2b59c3;
+    --tag-bg: #eef2fb;
+    --tag-fg: #2b59c3;
+    --tag-ok-bg: #e8f5ec;
+    --tag-ok-fg: #1d7a3e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141416;
+      --fg: #ececee;
+      --muted: #a1a1a8;
+      --faint: #2a2a2e;
+      --accent: #8fb0ff;
+      --tag-bg: #1f2a44;
+      --tag-fg: #a9c1ff;
+      --tag-ok-bg: #173323;
+      --tag-ok-fg: #7fd69c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { display: flex; gap: 28px; align-items: center; margin-bottom: 36px; }
+  .avatar {
+    flex: none; width: 120px; height: 120px; border-radius: 50%;
+    background: var(--tag-bg); color: var(--tag-fg);
+    display: grid; place-items: center; font-size: 40px; font-weight: 600;
+    overflow: hidden;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h1 .ko { font-weight: 400; color: var(--muted); font-size: 22px; margin-left: 6px; }
+  .role { margin: 0 0 10px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 15px; }
+
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin: 44px 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--faint);
+  }
+  p { margin: 0 0 12px; }
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+
+  .pub { margin-bottom: 22px; }
+  .pub-title { font-weight: 600; }
+  .pub-authors, .pub-venue { color: var(--muted); font-size: 15px; }
+  .pub-authors b { color: var(--fg); font-weight: 600; }
+  .pub-note { font-size: 15px; margin-top: 2px; }
+  .pub-links { font-size: 14px; margin-top: 4px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .tag {
+    display: inline-block; font-size: 12px; font-weight: 600; line-height: 1;
+    padding: 4px 7px; border-radius: 4px; margin-right: 6px; vertical-align: 2px;
+    background: var(--tag-bg); color: var(--tag-fg);
+  }
+  .tag.ok { background: var(--tag-ok-bg); color: var(--tag-ok-fg); }
+
+  .row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+  .row .when { color: var(--muted); font-size: 15px; white-space: nowrap; }
+  .row .what { min-width: 0; }
+  .sub { color: var(--muted); font-size: 15px; }
+
+  .proj { margin-bottom: 16px; }
+  .proj-name { font-weight: 600; }
+  .proj-desc { font-size: 15px; }
+
+  footer { margin-top: 56px; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 560px) {
+    main { padding: 36px 16px 56px; }
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .avatar { width: 96px; height: 96px; font-size: 32px; }
+    h1 { font-size: 26px; }
+    .row { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="avatar" aria-hidden="true">
+    <img src="assets/profile.jpg" alt="" onerror="this.parentElement.textContent = 'SK';">
+  </div>
+  <div>
+    <h1>Seungyeop Kang<span class="ko">강승엽</span></h1>
+    <p class="role">Efficient deep learning · Neural architecture search · Model compression</p>
+    <div class="links">
+      <a href="mailto:a01073553545@gmail.com">Email</a>
+      <a href="https://github.com/Seungyeopkang">GitHub</a>
+      <a href="https://doi.org/10.3390/electronics15153408">Publication</a>
+      <a href="https://fuzzy-wildebeest-406.notion.site/Seungyeop-Kang-bb873d4932e08374abde8101f85f3227">Portfolio</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <p>I make neural networks cheaper to run without losing accuracy. My work covers searching for efficient architectures, removing redundant computation after search, and checking whether the cheap signals used to guide search can be trusted.</p>
+  <p>I am finishing a B.S. in Artificial Intelligence at Kyonggi University, where I have been an undergraduate researcher in the AutoML Lab (advisor: Prof. Wangduk Seo). In March 2027 I start an M.S. at the AutoML Lab, Chung-Ang University, working on joint pruning, quantization, and low-rank compression for on-device LLMs.</p>
+</section>
+
+<h2>Publications</h2>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag ok">Electronics 2026</span>Budgeted Fixed-Proxy Search for Zero-Shot NAS via Evaluation-Efficient Memetic NAS</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b>, Wangduk Seo</div>
+  <div class="pub-venue"><i>Electronics</i> 15(15), 3408, 2026 (SCIE)</div>
+  <div class="pub-note">93 wins / 3 ties / 0 losses over 96 paired comparisons, using 100 proxy evaluations per run on NAS-Bench-201.</div>
+  <div class="pub-links"><a href="https://doi.org/10.3390/electronics15153408">Paper</a><a href="https://github.com/Seungyeopkang/eem-nas">Code</a></div>
+</div>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag">Under review</span>Post-search optimization for DARTS-style architectures</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-note">ImageNet FLOPs −27.2% at −0.28 pp Top-1, with latency measured on iPhone (Core ML) and Exynos (ONNX Runtime).</div>
+</div>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag">Under review</span>Size-aware zero-cost NAS proxies</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-note">Tests whether zero-cost proxy signals survive once parameter count and FLOPs are controlled, across 24 proxies and 6 benchmark families.</div>
+</div>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag">Manuscript</span>When does proxy optimization beat random selection?</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-note">Shows that proxy-optimized architecture selection can underperform random selection.</div>
+  <div class="pub-links"><a href="https://github.com/Seungyeopkang/zero-cost-proxy-endpoints">Code</a></div>
+</div>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag ok">KIIT 2026</span>Smart Glass-Based Object Location Memory and Conversational Search System for Daily-Life Assistance</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-venue">Korean Institute of Information Technology, 2026 · Outstanding Paper Award (Silver)</div>
+</div>
+
+<div class="pub">
+  <div class="pub-title"><span class="tag ok">KIIT 2025</span>Development of an AI-Based Infant Safety Monitoring and Real-Time Response System</div>
+  <div class="pub-authors"><b>Seungyeop Kang</b> et al.</div>
+  <div class="pub-venue">Korean Institute of Information Technology, 2025</div>
+</div>
+
+<h2>Projects</h2>
+
+<div class="proj">
+  <div class="proj-name"><a href="https://github.com/Seungyeopkang/EfficientViT-Optimization">EfficientViT optimization</a></div>
+  <div class="proj-desc">Parallelized cascaded attention with FlashAttention. Inference latency −24.9% (63.9 → 48.0 ms).</div>
+</div>
+<div class="proj">
+  <div class="proj-name"><a href="https://github.com/Seungyeopkang/Industrial-Safety-Pipeline">Industrial safety inspection pipeline</a></div>
+  <div class="proj-desc">PPE detection, selective VLM verification, and regulation-grounded RAG. Only 27.9% of detections are routed to the VLM.</div>
+</div>
+<div class="proj">
+  <div class="proj-name"><a href="https://github.com/Seungyeopkang/smart-glass-project">Smart glass memory assistant</a></div>
+  <div class="proj-desc">Multi-pass VLM visual memory with grounded question answering. AI and team lead, 6 members.</div>
+</div>
+<div class="proj">
+  <div class="proj-name"><a href="https://github.com/Seungyeopkang/infant_safety_monitor">Infant safety monitor</a></div>
+  <div class="proj-desc">Pose-based fall detection and cry recognition fused into event-level alerts. 98.1% cry-classification accuracy. AI and team lead.</div>
+</div>
+
+<h2>Education</h2>
+
+<div class="row">
+  <div class="what">M.S., AutoML Lab, Chung-Ang University</div>
+  <div class="when">Mar. 2027 –</div>
+</div>
+<div class="row">
+  <div class="what">B.S. in Artificial Intelligence, Kyonggi University<div class="sub">Undergraduate researcher, AutoML Lab (Feb. 2025 – Aug. 2026)</div></div>
+  <div class="when">2021 – Feb. 2027</div>
+</div>
+
+<h2>Honors</h2>
+<ul class="plain">
+  <li>Outstanding Paper Award (Silver), KIIT 2026 Summer Conference, Undergraduate Paper Competition</li>
+  <li>Academic Excellence Scholarship and Undergraduate Research Scholarship, Kyonggi University, 2025</li>
+  <li>Silver Award, Kyonggi University Capstone Design Competition, 2025</li>
+  <li>Gold Award, AWS DeepRacer League (Kyonggi University)</li>
+</ul>
+
+<footer>Last updated November 2026</footer>
+
+</main>
+</body>
+</html>
